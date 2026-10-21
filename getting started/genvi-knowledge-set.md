@@ -8,8 +8,8 @@
 
 ## 🗺️ Overview
 
-1. **Install the GenVI package:** install the `.vip` from the releases page using VIPM.
-2. **Configure the LabVIEW version** in Second Brain **Settings**.
+1. **Install the GenVI package:** install the `.vip` from the [Releases](https://github.com/solitontech/secondbrain-ga/releases) page using VIPM.
+2. **Configure Second Brain:** allow the folder that holds your LabVIEW project, and select the LabVIEW version.
 3. **Create a project**, then add a **GenVI knowledge set** to it and point it at your LabVIEW project folder.
 4. **Use it with your AI coding agent** through MCP.
 
@@ -17,13 +17,43 @@
 
 ## ✅ Prerequisites
 
-1. The **GenVI** package is installed. Download the `.vip` from the releases page (`x64` or `x86` to match your LabVIEW) and install it with [VIPM](https://www.vipm.io/).
+1. The **GenVI** package is installed. Download the `.vip` from the [Releases](https://github.com/solitontech/secondbrain-ga/releases) page (`x64` or `x86` to match your LabVIEW) and install it with [VIPM](https://www.vipm.io/).
 2. 🪟 **LabVIEW is running** whenever you create the knowledge set or use _Ask Second Brain_.
-3. The LabVIEW version is configured in **Settings** (see [Second Brain Settings](settings.md)). Pick a version marked **with GenVI**.
 
 ---
 
-## ➕ 1. Add the knowledge set
+## ⚙️ 1. Configure Second Brain
+
+Open **Settings**. These apply to every project in this installation.
+
+### 📁 Folders Second Brain may read
+
+1. Expand **Advanced**.
+2. Enter absolute paths in **Folders Second Brain may read**, comma-separated (e.g. `D:\,C:\`). Include the folder that holds your LabVIEW projects.
+
+![Allowed folders](images/allowed-folders.png)
+
+> 💡 **Note:** Blank means your home folder, the app folder and the temp folder.
+
+### 🔬 LabVIEW version
+
+🪟 **Windows only.**
+
+1. Under **LabVIEW (GenVI)**, open the dropdown.
+2. Select a version marked **with GenVI**.
+3. Click **Check LabVIEW**. Wait for _"LabVIEW is ready. VI Server is ready."_ ✅
+
+![LabVIEW version](images/labview-version.png)
+
+![Check and save](images/labview-check-save.png)
+
+### 💾 Apply your changes
+
+Click **Save and restart services**. Changes to the settings above only take effect after this.
+
+---
+
+## ➕ 2. Add the knowledge set
 
 First create a project to hold the knowledge set, or open an existing one. Then go to **Second Brain → Knowledge Sets → Add Knowledge Set**.
 
@@ -41,7 +71,7 @@ First create a project to hold the knowledge set, or open an existing one. Then 
 
 ---
 
-## 🔌 2. Connect a coding agent
+## 🔌 3. Connect a coding agent
 
 Go to **Open Agents → Integrations & MCP**.
 
@@ -53,7 +83,7 @@ Go to **Open Agents → Integrations & MCP**.
 
 ---
 
-## 🧪 3. Check that it works
+## 🧪 4. Check that it works
 
 Ask your agent:
 
