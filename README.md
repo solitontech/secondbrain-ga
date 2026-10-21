@@ -21,6 +21,10 @@ Second Brain understands **LabVIEW source**. Point it at a folder of GenVI code 
 - **Rebuild incrementally**: only changed files are re-parsed
 - **Connect AI tools** through MCP so your assistants can query the same memory
 
+> **Supported LabVIEW versions:** LabVIEW 2020 and above. Support for LabVIEW 2013 to 2019 is coming soon.
+>
+> **macOS:** the GenVI package for macOS is not ready yet and is coming soon.
+
 ## And everything else
 
 |     | Feature                  | Description                                                         |
