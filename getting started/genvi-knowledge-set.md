@@ -6,17 +6,26 @@
 
 ---
 
+## 🗺️ Overview
+
+1. **Install the GenVI package:** install the `.vip` from the releases page using VIPM.
+2. **Configure the LabVIEW version** in Second Brain **Settings**.
+3. **Create a project**, then add a **GenVI knowledge set** to it and point it at your LabVIEW project folder.
+4. **Use it with your AI coding agent** through MCP.
+
+---
+
 ## ✅ Prerequisites
 
-1. The **GenVI** package is installed. Download it from the releases page.
+1. The **GenVI** package is installed. Download the `.vip` from the releases page (`x64` or `x86` to match your LabVIEW) and install it with [VIPM](https://www.vipm.io/).
 2. 🪟 **LabVIEW is running** whenever you create the knowledge set or use _Ask Second Brain_.
-3. LabVIEW is configured in **Settings** (see [Second Brain Settings](settings.md)).
+3. The LabVIEW version is configured in **Settings** (see [Second Brain Settings](settings.md)). Pick a version marked **with GenVI**.
 
 ---
 
 ## ➕ 1. Add the knowledge set
 
-Go to **Second Brain → Knowledge Sets → Add Knowledge Set**.
+First create a project to hold the knowledge set, or open an existing one. Then go to **Second Brain → Knowledge Sets → Add Knowledge Set**.
 
 ![Add Knowledge Set dialog with GenVI selected](images/genvi-add-knowledge-set.png)
 
