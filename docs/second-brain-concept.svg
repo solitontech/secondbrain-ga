@@ -1,0 +1,260 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 660" width="1200" height="660" role="img" aria-labelledby="t d">
+  <title id="t">How Second Brain works</title>
+  <desc id="d">Requirements, firmware, LabVIEW, datasheets and tests flow into one connected memory. The memory is shared over MCP with every AI agent. An agent asks whether REQ-114 is implemented and tested, the question walks the graph from requirement to code to test to datasheet, and the answer comes back with a source for every claim.</desc>
+  <defs>
+    <pattern id="grid" x="10" y="46" width="59" height="60.4" patternUnits="userSpaceOnUse">
+      <path d="M59 0V60.4M0 60.4H59" fill="none" stroke="#96B9B2" stroke-opacity=".07"/>
+    </pattern>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <style>
+    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace}
+    .body{font-family:"Segoe UI",-apple-system,"Helvetica Neue",Arial,sans-serif}
+    .fly{animation:fly 16s ease-in-out infinite backwards}
+    .n{animation:node 16s ease-in-out infinite}
+    .ed{stroke-dasharray:100;animation:draw 16s ease-in-out infinite}
+    .rel{animation:rel 16s ease-in-out infinite}
+    .bus{stroke-dasharray:100;animation:cable 16s ease-in-out infinite backwards}
+    .ag{animation:agent 16s ease-in-out infinite backwards}
+    .pulse{opacity:0;animation:pulse 16s linear infinite}
+    .hl{stroke-dasharray:100;stroke-dashoffset:100}
+    .h1{animation:h1 16s linear infinite}.h2{animation:h2 16s linear infinite}.h3{animation:h3 16s linear infinite}
+    .r1{animation:r1 16s infinite}.r2{animation:r2 16s infinite}.r3{animation:r3 16s infinite}.r4{animation:r4 16s infinite}
+    .q{animation:q 16s infinite}.a{animation:a 16s infinite}.wait{animation:wait 16s infinite}
+    .st1{animation:st1 16s infinite}.st2{animation:st2 16s infinite}.st3{animation:st3 16s infinite}.st4{animation:st4 16s infinite}
+    .tx1{animation:tx1 16s infinite}.tx2{animation:tx2 16s infinite}.tx3{animation:tx3 16s infinite}.tx4{animation:tx4 16s infinite}
+    .bar{transform-box:fill-box;transform-origin:left center}
+    .b1{animation:b1 16s linear infinite}.b2{animation:b2 16s linear infinite}.b3{animation:b3 16s linear infinite}.b4{animation:b4 16s linear infinite}
+
+    @keyframes fly{0%{transform:translate(var(--x),var(--y));opacity:0}2%{opacity:1}14%{transform:translate(0,0);opacity:1}16%,100%{transform:translate(0,0);opacity:0}}
+    @keyframes node{0%,8%{opacity:0}18%,94%{opacity:1}100%{opacity:0}}
+    @keyframes draw{0%,25%{stroke-dashoffset:100;opacity:1}38%,94%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}
+    @keyframes rel{0%,36%{opacity:0}42%,94%{opacity:1}100%{opacity:0}}
+    @keyframes cable{0%,45%{stroke-dashoffset:100;opacity:1}52%,94%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}
+    @keyframes agent{0%,46%{opacity:.3}53%,94%{opacity:1}100%{opacity:.3}}
+    @keyframes pulse{
+      0%,61.9%{opacity:0;transform:translate(915px,141px)}
+      62%{opacity:1;transform:translate(915px,141px)}
+      66%{transform:translate(500px,170px)}
+      70%{transform:translate(700px,170px)}
+      74%{transform:translate(700px,340px)}
+      78%{transform:translate(500px,340px)}
+      83%{opacity:1;transform:translate(915px,141px)}
+      84%,100%{opacity:0;transform:translate(915px,141px)}}
+    @keyframes h1{0%,66%{stroke-dashoffset:100;opacity:1}70%,94%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}
+    @keyframes h2{0%,70%{stroke-dashoffset:100;opacity:1}74%,94%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}
+    @keyframes h3{0%,74%{stroke-dashoffset:100;opacity:1}78%,94%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}
+    @keyframes r1{0%,65%{opacity:0}67%,94%{opacity:1}100%{opacity:0}}
+    @keyframes r2{0%,69%{opacity:0}71%,94%{opacity:1}100%{opacity:0}}
+    @keyframes r3{0%,73%{opacity:0}75%,94%{opacity:1}100%{opacity:0}}
+    @keyframes r4{0%,77%{opacity:0}79%,94%{opacity:1}100%{opacity:0}}
+    @keyframes q{0%,61%{opacity:0}63%,95%{opacity:1}100%{opacity:0}}
+    @keyframes a{0%,83%{opacity:0}86%,95%{opacity:1}100%{opacity:0}}
+    @keyframes wait{0%,60%{opacity:1}62%,98%{opacity:0}100%{opacity:1}}
+    @keyframes st1{0%,24%{opacity:1}26%,98%{opacity:.35}100%{opacity:1}}
+    @keyframes st2{0%,24%{opacity:.35}26%,44%{opacity:1}46%,100%{opacity:.35}}
+    @keyframes st3{0%,44%{opacity:.35}46%,61%{opacity:1}63%,100%{opacity:.35}}
+    @keyframes st4{0%,61%{opacity:.35}63%,96%{opacity:1}98%,100%{opacity:.35}}
+    @keyframes tx1{0%,24%{opacity:1}25%,99%{opacity:0}100%{opacity:1}}
+    @keyframes tx2{0%,24%{opacity:0}25%,44%{opacity:1}45%,100%{opacity:0}}
+    @keyframes tx3{0%,44%{opacity:0}45%,61%{opacity:1}62%,100%{opacity:0}}
+    @keyframes tx4{0%,61%{opacity:0}62%,99%{opacity:1}100%{opacity:0}}
+    @keyframes b1{0%{transform:scaleX(0)}25%,96%{transform:scaleX(1)}100%{transform:scaleX(0)}}
+    @keyframes b2{0%,25%{transform:scaleX(0)}45%,96%{transform:scaleX(1)}100%{transform:scaleX(0)}}
+    @keyframes b3{0%,45%{transform:scaleX(0)}62%,96%{transform:scaleX(1)}100%{transform:scaleX(0)}}
+    @keyframes b4{0%,62%{transform:scaleX(0)}95%,96%{transform:scaleX(1)}100%{transform:scaleX(0)}}
+
+    @media (prefers-reduced-motion:reduce){
+      .fly,.pulse,.wait,.tx1,.tx2,.tx3{animation:none;opacity:0}
+      .n,.ed,.rel,.bus,.ag,.hl,.r1,.r2,.r3,.r4,.q,.a,.st1,.st2,.st3,.st4,.tx4{animation:none;opacity:1;stroke-dashoffset:0}
+      .bar{animation:none;transform:none}}
+  </style>
+
+  <!-- bezel, screen, graticule -->
+  <rect width="1200" height="660" rx="20" fill="#23282B"/>
+  <rect x="10" y="10" width="1180" height="640" rx="12" fill="#0B1113"/>
+  <rect x="10" y="46" width="1180" height="604" fill="url(#grid)"/>
+  <path d="M10 46H1190" stroke="#96B9B2" stroke-opacity=".16"/>
+
+  <!-- top bar -->
+  <g class="mono" font-size="13" letter-spacing="1.5">
+    <circle cx="34" cy="28" r="4" fill="#5BCB72" filter="url(#glow)"/>
+    <text x="46" y="33" fill="#5BCB72">RUN</text>
+    <text x="104" y="33" fill="#7A928D">SECOND BRAIN · HOW IT WORKS</text>
+    <g text-anchor="end" fill="#D5E6E1">
+      <text class="tx1" x="1170" y="33">01 INGEST</text>
+      <text class="tx2" x="1170" y="33">02 CONNECT</text>
+      <text class="tx3" x="1170" y="33">03 SHARE</text>
+      <text class="tx4" x="1170" y="33">04 TRACE</text>
+    </g>
+  </g>
+
+  <!-- column headers -->
+  <g class="mono" font-size="12" letter-spacing="2" fill="#7A928D">
+    <text x="40" y="76">YOUR PROGRAM'S KNOWLEDGE</text>
+    <text x="600" y="76" text-anchor="middle">ONE CONNECTED MEMORY</text>
+    <text x="920" y="76">EVERY AI AGENT</text>
+  </g>
+
+  <!-- sources -->
+  <g class="body" font-size="15">
+    <g><rect x="40" y="104" width="230" height="46" rx="6" fill="#D5E6E1" fill-opacity=".03" stroke="#F4C430" stroke-opacity=".55"/>
+      <circle cx="60" cy="127" r="4" fill="#F4C430"/><text x="74" y="132" fill="#D5E6E1">Requirements</text>
+      <text class="mono" x="258" y="131" font-size="11" text-anchor="end" fill="#7A928D">.docx</text></g>
+    <g><rect x="40" y="162" width="230" height="46" rx="6" fill="#D5E6E1" fill-opacity=".03" stroke="#2EC5D9" stroke-opacity=".55"/>
+      <circle cx="60" cy="185" r="4" fill="#2EC5D9"/><text x="74" y="190" fill="#D5E6E1">Firmware</text>
+      <text class="mono" x="258" y="189" font-size="11" text-anchor="end" fill="#7A928D">git</text></g>
+    <g><rect x="40" y="220" width="230" height="46" rx="6" fill="#D5E6E1" fill-opacity=".03" stroke="#2EC5D9" stroke-opacity=".55"/>
+      <circle cx="60" cy="243" r="4" fill="#2EC5D9"/><text x="74" y="248" fill="#D5E6E1">LabVIEW projects</text>
+      <text class="mono" x="258" y="247" font-size="11" text-anchor="end" fill="#7A928D">.vi</text></g>
+    <g><rect x="40" y="278" width="230" height="46" rx="6" fill="#D5E6E1" fill-opacity=".03" stroke="#E25AA8" stroke-opacity=".55"/>
+      <circle cx="60" cy="301" r="4" fill="#E25AA8"/><text x="74" y="306" fill="#D5E6E1">Datasheets</text>
+      <text class="mono" x="258" y="305" font-size="11" text-anchor="end" fill="#7A928D">.pdf</text></g>
+    <g><rect x="40" y="336" width="230" height="46" rx="6" fill="#D5E6E1" fill-opacity=".03" stroke="#5BCB72" stroke-opacity=".55"/>
+      <circle cx="60" cy="359" r="4" fill="#5BCB72"/><text x="74" y="364" fill="#D5E6E1">Test procedures</text>
+      <text class="mono" x="258" y="363" font-size="11" text-anchor="end" fill="#7A928D">.docx</text></g>
+  </g>
+
+  <!-- the memory -->
+  <rect x="360" y="92" width="480" height="330" rx="24" fill="none" stroke="#7A928D" stroke-opacity=".6" stroke-dasharray="3 5"/>
+  <text class="mono" x="600" y="412" font-size="11" letter-spacing="2" text-anchor="middle" fill="#7A928D">SECOND BRAIN</text>
+
+  <!-- 02 connect: edges inside each set, then links across sets -->
+  <g fill="none" stroke-width="1.2">
+    <g stroke="#F4C430" stroke-opacity=".5">
+      <path class="ed" pathLength="100" d="M500 170L440 130"/><path class="ed" pathLength="100" d="M500 170L430 200"/><path class="ed" pathLength="100" d="M500 170L520 118"/>
+    </g>
+    <g stroke="#2EC5D9" stroke-opacity=".5">
+      <path class="ed" pathLength="100" d="M700 170L760 128"/><path class="ed" pathLength="100" d="M700 170L775 200"/><path class="ed" pathLength="100" d="M700 170L680 118"/>
+    </g>
+    <g stroke="#E25AA8" stroke-opacity=".5">
+      <path class="ed" pathLength="100" d="M500 340L430 310"/><path class="ed" pathLength="100" d="M500 340L445 380"/><path class="ed" pathLength="100" d="M500 340L540 388"/>
+    </g>
+    <g stroke="#5BCB72" stroke-opacity=".5">
+      <path class="ed" pathLength="100" d="M700 340L770 305"/><path class="ed" pathLength="100" d="M700 340L760 382"/><path class="ed" pathLength="100" d="M700 340L655 390"/>
+    </g>
+    <g stroke="#D5E6E1" stroke-opacity=".45">
+      <path class="ed" pathLength="100" d="M500 170L700 170"/><path class="ed" pathLength="100" d="M700 170L700 340"/>
+      <path class="ed" pathLength="100" d="M700 340L500 340"/><path class="ed" pathLength="100" d="M500 170L500 340"/>
+      <path class="ed" pathLength="100" d="M520 118L680 118"/><path class="ed" pathLength="100" d="M540 388L655 390"/>
+    </g>
+  </g>
+  <g class="rel mono" font-size="11" fill="#7A928D">
+    <text x="600" y="160" text-anchor="middle">implements</text>
+    <text x="710" y="259">verified by</text>
+    <text x="600" y="360" text-anchor="middle">limit from</text>
+  </g>
+
+  <!-- 04 trace: the path a question takes -->
+  <g fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" filter="url(#glow)">
+    <path class="hl h1" pathLength="100" d="M500 170L700 170"/>
+    <path class="hl h2" pathLength="100" d="M700 170L700 340"/>
+    <path class="hl h3" pathLength="100" d="M700 340L500 340"/>
+  </g>
+  <g fill="none" stroke-width="1.5">
+    <circle class="r1" cx="500" cy="170" r="12" stroke="#F4C430"/>
+    <circle class="r2" cx="700" cy="170" r="12" stroke="#2EC5D9"/>
+    <circle class="r3" cx="700" cy="340" r="12" stroke="#5BCB72"/>
+    <circle class="r4" cx="500" cy="340" r="12" stroke="#E25AA8"/>
+  </g>
+
+  <!-- 01 ingest: fragments fly from each source into the graph -->
+  <g fill="#F4C430">
+    <circle class="fly" cx="500" cy="170" r="3" style="--x:-230px;--y:-43px"/>
+    <circle class="fly" cx="440" cy="130" r="3" style="--x:-170px;--y:-3px;animation-delay:.45s"/>
+    <circle class="fly" cx="520" cy="118" r="3" style="--x:-250px;--y:9px;animation-delay:.9s"/>
+  </g>
+  <g fill="#2EC5D9">
+    <circle class="fly" cx="700" cy="170" r="3" style="--x:-430px;--y:15px;animation-delay:.25s"/>
+    <circle class="fly" cx="760" cy="128" r="3" style="--x:-490px;--y:57px;animation-delay:.7s"/>
+    <circle class="fly" cx="680" cy="118" r="3" style="--x:-410px;--y:67px;animation-delay:1.15s"/>
+    <circle class="fly" cx="775" cy="200" r="3" style="--x:-505px;--y:43px;animation-delay:.5s"/>
+    <circle class="fly" cx="700" cy="170" r="3" style="--x:-430px;--y:73px;animation-delay:.95s"/>
+    <circle class="fly" cx="760" cy="128" r="3" style="--x:-490px;--y:115px;animation-delay:1.4s"/>
+  </g>
+  <g fill="#E25AA8">
+    <circle class="fly" cx="500" cy="340" r="3" style="--x:-230px;--y:-39px;animation-delay:.75s"/>
+    <circle class="fly" cx="430" cy="310" r="3" style="--x:-160px;--y:-9px;animation-delay:1.2s"/>
+    <circle class="fly" cx="540" cy="388" r="3" style="--x:-270px;--y:-87px;animation-delay:1.65s"/>
+  </g>
+  <g fill="#5BCB72">
+    <circle class="fly" cx="700" cy="340" r="3" style="--x:-430px;--y:19px;animation-delay:1s"/>
+    <circle class="fly" cx="770" cy="305" r="3" style="--x:-500px;--y:54px;animation-delay:1.45s"/>
+    <circle class="fly" cx="655" cy="390" r="3" style="--x:-385px;--y:-31px;animation-delay:1.9s"/>
+  </g>
+
+  <!-- graph nodes -->
+  <g class="n" filter="url(#glow)">
+    <g fill="#F4C430"><circle cx="500" cy="170" r="7"/><circle cx="440" cy="130" r="4"/><circle cx="430" cy="200" r="4"/><circle cx="520" cy="118" r="4"/></g>
+    <g fill="#2EC5D9"><circle cx="700" cy="170" r="7"/><circle cx="760" cy="128" r="4"/><circle cx="775" cy="200" r="4"/><circle cx="680" cy="118" r="4"/></g>
+    <g fill="#E25AA8"><circle cx="500" cy="340" r="7"/><circle cx="430" cy="310" r="4"/><circle cx="445" cy="380" r="4"/><circle cx="540" cy="388" r="4"/></g>
+    <g fill="#5BCB72"><circle cx="700" cy="340" r="7"/><circle cx="770" cy="305" r="4"/><circle cx="760" cy="382" r="4"/><circle cx="655" cy="390" r="4"/></g>
+  </g>
+  <g class="n mono" font-size="12" fill="#D5E6E1">
+    <text x="512" y="194">REQ-114</text>
+    <text x="688" y="194" text-anchor="end">amp_set_gain()</text>
+    <text x="688" y="326" text-anchor="end">TP-RF-022</text>
+    <text x="512" y="326">LNA-X7 §7.2</text>
+  </g>
+
+  <!-- 03 share: MCP bus to every agent -->
+  <text class="mono" x="880" y="110" font-size="11" letter-spacing="2" text-anchor="middle" fill="#7A928D">MCP</text>
+  <g fill="none" stroke="#D5E6E1" stroke-opacity=".5" stroke-width="1.3">
+    <path class="bus" pathLength="100" d="M840 141H920"/>
+    <path class="bus" pathLength="100" d="M840 207H920" style="animation-delay:.3s"/>
+    <path class="bus" pathLength="100" d="M840 273H920" style="animation-delay:.6s"/>
+    <path class="bus" pathLength="100" d="M840 339H920" style="animation-delay:.9s"/>
+    <path class="bus" pathLength="100" d="M880 120V360"/>
+  </g>
+  <g>
+    <g class="ag"><rect x="920" y="116" width="240" height="50" rx="6" fill="#0B1113" stroke="#D5E6E1" stroke-opacity=".5"/>
+      <text class="body" x="938" y="139" font-size="15" fill="#D5E6E1">Claude Code</text>
+      <text class="mono" x="938" y="156" font-size="11" fill="#7A928D">in the engineer's editor</text></g>
+    <g class="ag" style="animation-delay:.3s"><rect x="920" y="182" width="240" height="50" rx="6" fill="#0B1113" stroke="#D5E6E1" stroke-opacity=".5"/>
+      <text class="body" x="938" y="205" font-size="15" fill="#D5E6E1">Cursor</text>
+      <text class="mono" x="938" y="222" font-size="11" fill="#7A928D">in the engineer's editor</text></g>
+    <g class="ag" style="animation-delay:.6s"><rect x="920" y="248" width="240" height="50" rx="6" fill="#0B1113" stroke="#D5E6E1" stroke-opacity=".5"/>
+      <text class="body" x="938" y="271" font-size="15" fill="#D5E6E1">Ask the Second Brain</text>
+      <text class="mono" x="938" y="288" font-size="11" fill="#7A928D">chat with sources</text></g>
+    <g class="ag" style="animation-delay:.9s"><rect x="920" y="314" width="240" height="50" rx="6" fill="#0B1113" stroke="#D5E6E1" stroke-opacity=".5"/>
+      <text class="body" x="938" y="337" font-size="15" fill="#D5E6E1">Custom agents</text>
+      <text class="mono" x="938" y="354" font-size="11" fill="#7A928D">coverage, impact, review</text></g>
+  </g>
+
+  <!-- the question's journey -->
+  <circle class="pulse" cx="0" cy="0" r="5" fill="#FFFFFF" filter="url(#glow)"/>
+
+  <!-- question and answer -->
+  <rect x="40" y="436" width="1120" height="84" rx="8" fill="#D5E6E1" fill-opacity=".03" stroke="#7A928D" stroke-opacity=".4"/>
+  <g class="mono" font-size="13">
+    <text class="wait" x="60" y="483" fill="#7A928D" letter-spacing="1">AWAITING A QUESTION ▍</text>
+    <text class="q" x="60" y="468" fill="#D5E6E1"><tspan fill="#2EC5D9" font-weight="700">Q </tspan> Claude Code asks: Is REQ-114 implemented and tested?</text>
+    <text class="a" x="60" y="500" fill="#D5E6E1"><tspan fill="#5BCB72" font-weight="700">A </tspan> Yes. amp_set_gain() implements it <tspan fill="#2EC5D9">[1]</tspan>, TP-RF-022 verifies it <tspan fill="#5BCB72">[2]</tspan>, and its 20 dB ±0.5 limit comes from LNA-X7 §7.2 <tspan fill="#E25AA8">[3]</tspan>.</text>
+  </g>
+
+  <!-- the four steps -->
+  <path d="M40 544H1160" stroke="#96B9B2" stroke-opacity=".16"/>
+  <g class="st1">
+    <text class="mono" x="40" y="572" font-size="13" letter-spacing="2" fill="#D5E6E1">01  INGEST</text>
+    <rect x="40" y="582" width="250" height="3" fill="#96B9B2" fill-opacity=".2"/><rect class="bar b1" x="40" y="582" width="250" height="3" fill="#F4C430"/>
+    <text class="body" x="40" y="608" font-size="14" fill="#9DB3AE">Specs, code, LabVIEW, datasheets<tspan x="40" dy="20">and tests are read in.</tspan></text>
+  </g>
+  <g class="st2">
+    <text class="mono" x="320" y="572" font-size="13" letter-spacing="2" fill="#D5E6E1">02  CONNECT</text>
+    <rect x="320" y="582" width="250" height="3" fill="#96B9B2" fill-opacity=".2"/><rect class="bar b2" x="320" y="582" width="250" height="3" fill="#2EC5D9"/>
+    <text class="body" x="320" y="608" font-size="14" fill="#9DB3AE">Requirements link to the code,<tspan x="320" dy="20">tests and datasheets behind them.</tspan></text>
+  </g>
+  <g class="st3">
+    <text class="mono" x="600" y="572" font-size="13" letter-spacing="2" fill="#D5E6E1">03  SHARE</text>
+    <rect x="600" y="582" width="250" height="3" fill="#96B9B2" fill-opacity=".2"/><rect class="bar b3" x="600" y="582" width="250" height="3" fill="#E25AA8"/>
+    <text class="body" x="600" y="608" font-size="14" fill="#9DB3AE">One memory, served over MCP<tspan x="600" dy="20">to every agent the team uses.</tspan></text>
+  </g>
+  <g class="st4">
+    <text class="mono" x="880" y="572" font-size="13" letter-spacing="2" fill="#D5E6E1">04  TRACE</text>
+    <rect x="880" y="582" width="250" height="3" fill="#96B9B2" fill-opacity=".2"/><rect class="bar b4" x="880" y="582" width="250" height="3" fill="#5BCB72"/>
+    <text class="body" x="880" y="608" font-size="14" fill="#9DB3AE">Agents search the memory and cite<tspan x="880" dy="20">a source for every claim.</tspan></text>
+  </g>
+</svg>
