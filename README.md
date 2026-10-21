@@ -6,11 +6,11 @@ Second Brain turns your documents, code and LabVIEW projects into a connected me
 
 ## Knowledge sets
 
-| | Knowledge set | What you get |
-| --- | --- | --- |
-| 📄 | **Document** | Files turned into searchable chunks, entities and relationships |
-| 💻 | **Code** | A structural memory of a repository |
-| 🔬 | **GenVI** | A call and membership memory of LabVIEW source |
+|     | Knowledge set | What you get                                                    |
+| --- | ------------- | --------------------------------------------------------------- |
+| 📄  | **Document**  | Files turned into searchable chunks, entities and relationships |
+| 💻  | **Code**      | A structural memory of a repository                             |
+| 🔬  | **GenVI**     | A call and membership memory of LabVIEW source                  |
 
 ## ⭐ Now with GenVI
 
@@ -23,11 +23,10 @@ Second Brain understands **LabVIEW source**. Point it at a folder of GenVI code 
 
 ## And everything else
 
-| | Feature | Description |
-| --- | --- | --- |
-| 🕸️ | **Knowledge Explorer** | See exactly what was stored, as an interactive map |
-| 💬 | **Ask the Second Brain** | An agent picks the right retrieval tools and answers with citations |
-| 🤖 | **Custom agents** | Run your team's own instructions, read-only, from the app or a trigger link |
+|     | Feature                  | Description                                                         |
+| --- | ------------------------ | ------------------------------------------------------------------- |
+| 🕸️  | **Knowledge Explorer**   | See exactly what was stored, as an interactive map                  |
+| 💬  | **Ask the Second Brain** | An agent picks the right retrieval tools and answers with citations |
 
 ## Download and install
 
@@ -71,4 +70,5 @@ For help and assistance, contact **[secondbrain@solitontech.com](mailto:secondbr
 To report a bug or request a feature, file it in the [Issues](../../issues) section.
 
 ---
+
 <sub>© Soliton Technologies</sub>
