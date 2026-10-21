@@ -31,7 +31,7 @@ Open **Settings**. These apply to every project in this installation.
 1. Expand **Advanced**.
 2. Enter absolute paths in **Folders Second Brain may read**, comma-separated (e.g. `D:\,C:\`). Include the folder that holds your LabVIEW projects.
 
-![Allowed folders](images/allowed-folders.png)
+![Allowed folders](images/windows-allowed-folders.png)
 
 > 💡 **Note:** Blank means your home folder, the app folder and the temp folder.
 
