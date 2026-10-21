@@ -63,6 +63,10 @@ These ports are used on your machine only and are not reachable from other compu
 
 The rest of the application works without it.
 
+## Getting started
+
+Once Second Brain is installed, follow the [Getting started guide](getting%20started/settings.md) to configure it.
+
 ## Help and support
 
 For help and assistance, contact **[secondbrain@solitontech.com](mailto:secondbrain@solitontech.com)**.
