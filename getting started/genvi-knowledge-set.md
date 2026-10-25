@@ -4,6 +4,14 @@
 
 > 💡 **Note:** Parsing needs no LLM. A rebuild writes only what changed.
 
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=Pb9GfldMgL8">
+    <img src="https://img.youtube.com/vi/Pb9GfldMgL8/maxresdefault.jpg?v=2" alt="GenVI walkthrough video" width="640">
+  </a>
+  <br>
+  <a href="https://www.youtube.com/watch?v=Pb9GfldMgL8"><b>▶️ Watch the video walkthrough on YouTube</b></a>
+</p>
+
 ---
 
 ## 🗺️ Overview
