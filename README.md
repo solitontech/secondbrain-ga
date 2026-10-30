@@ -41,12 +41,12 @@ Each release has these downloads:
 - **Second Brain application:** install the `.exe` on Windows, or the `.dmg` on macOS.
 - **GenVI package** (`.vip`, only needed for GenVI knowledge sets): install it with [VIPM](https://www.vipm.io/). Pick the `x64` or `x86` file to match your LabVIEW. Then follow the [GenVI knowledge set guide](getting%20started/genvi-knowledge-set.md).
 
-> The Second Brain application is not signed yet, so Windows and macOS will show a security warning the first time you install or open it. This is expected. Follow the steps for your system below.
+> The Second Brain application is signed only on Windows and macOS it will show a security warning the first time you install or open it. This is expected. Follow the steps for your system below.
 
 ### Windows
 
 1. Download the `.exe` installer from Releases.
-2. Your browser may warn that the file is not commonly downloaded. Choose **Keep** (in Edge: `...` → **Keep** → **Keep anyway**).
+2. Sometimes, your browser may warn that the file is not commonly downloaded. Choose **Keep** (in Edge: `...` → **Keep** → **Keep anyway**).
 3. Run the installer. If Windows SmartScreen appears, click **More info** → **Run anyway**.
 
 ### macOS
