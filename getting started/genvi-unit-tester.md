@@ -22,6 +22,7 @@
 3. 🪟 **LabVIEW and the GenVI client are installed and running.** Tests run in the LabVIEW that is open on this PC. Do not run LabVIEW as administrator, and close any dialog boxes in LabVIEW.
 4. **The reasoning model is configured in Settings.**
 5. **A GenVI knowledge set is built from your project.**
+
 ---
 
 ## ⚙️ 1. Configure the reasoning model
@@ -106,7 +107,3 @@ Click **Customize Tests** on the right side of the VI's page to add or change te
 > 💡 **Note:** The cost shown is an estimate. Your AI provider's own console is the real bill.
 
 ---
-
-## ➡️ Next steps
-
-- Good habits: start with two or three VIs, re-run after every change to a VI, and commit the `genvi_unit_tests\` folder with your project.
