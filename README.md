@@ -2,6 +2,12 @@
 
 Second Brain turns your documents, code and LabVIEW projects into a connected memory. You can explore it visually, ask questions in plain language, and share it with your AI tools over MCP.
 
+## Data Privacy
+
+1. **Your data stays on your machine.** Everything you upload into Second Brain, including documents, code, LabVIEW projects and the knowledge sets built from them, is stored on the computer where it runs. Its services run locally and are not reachable from other computers.
+2. **AI processing goes to the provider you configure.** When Second Brain uses AI on your data, such as generating unit tests from a VI, it sends that data to the AI provider you set up in Settings. That provider's own privacy and data-retention terms apply to the data it receives.
+3. **You choose which AI agents connect.** Second Brain provides an MCP server that the AI agents you choose can connect to. You decide which projects each connected agent can read. Anything an agent reads from Second Brain goes to that agent's AI service, under that service's terms.
+
 ![How Second Brain works: requirements, firmware, LabVIEW projects, datasheets and test procedures are read in, connected into one memory, shared with every AI agent over MCP, and traced into cited answers](docs/second-brain-concept.svg)
 
 ## Knowledge sets
@@ -63,18 +69,9 @@ Second Brain runs its services on your machine and needs **four free ports in th
 
 These ports are used on your machine only and are not reachable from other computers, so no firewall changes are needed.
 
-## Requirements for Ask the Second Brain
-
-**Ask the Second Brain** runs through Claude Code, so you need:
-
-1. [Claude Code](https://claude.com/claude-code) installed.
-2. To be signed in to Claude Code. Run `claude` in a terminal and complete the login.
-
-The rest of the application works without it.
-
 ## Getting started
 
-Once Second Brain is installed, follow the [Getting started guide](getting%20started/settings.md) to configure it.
+Once Second Brain is installed, follow the [GenVI knowledge set guide](getting%20started/genvi-knowledge-set.md) to configure it and build your first knowledge set. For LabVIEW unit tests, see the [GenVI Unit Tester quick start](getting%20started/genvi-unit-tester.md).
 
 ## Help and support
 
