@@ -17,7 +17,7 @@
 
 ## ✅ Prerequisites
 
-1. **Second Brain is installed.** Download the latest build for your platform from the [Releases](https://github.com/solitontech/secondbrain-ga/releases) page.
+1. **Second Brain is installed.** Download the latest Windows build from the [Releases](https://github.com/solitontech/secondbrain-ga/releases) page. macOS support is currently unavailable and will be supported soon.
 2. **The GenVI package is installed.** Download the `.vip` from the same page (`x64` or `x86` to match your LabVIEW) and install it with [VIPM](https://www.vipm.io/).
 3. 🪟 **LabVIEW and the GenVI client are installed and running.** Tests run in the LabVIEW that is open on this PC. Do not run LabVIEW as administrator, and close any dialog boxes in LabVIEW.
 4. **The reasoning model is configured in Settings.**
